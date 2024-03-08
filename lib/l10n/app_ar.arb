@@ -1,0 +1,134 @@
+{
+    "dark":"مظلم",
+    "light":"فاتح",
+    "display":"الشاشة",
+    "translate": "ترجم",
+    "darkMode": "الوضع الداكن",
+    "settings":"الإعدادات",
+    "languages": "اللغات",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "add": "زيادة",
+    "create": "إنشاء",
+    "cancel": "إلغاء",
+    "save":"حفظ",
+    "confirm": "تأكيد",
+    "deviceLanguage":"لغة الجهاز",
+    "useSystemSettings": "استخدم إعدادات النظام",
+    "node":"المحتوى",
+    "taxonomy":"التصنيف",
+    "listOf" : "{title}",
+    "@listOf" :{
+    "placeholders": {
+     "title": {
+        "type": "String",
+        "example": "category, tags"
+      }
+    }
+    },
+    "translationsOf": "{title} ترجمة",
+    "@translationsOf" :{
+      "description": "The title for translation page for entities",
+      "placeholders": {
+       "title": {
+          "type": "String"
+        }
+      }
+      },
+    "submitting": "جارٍ الإرسال ...",
+    "entityDeletedMessage": "هل تريد تأكيد حذف {entityType, select, taxonomy{التصنيف} node{المحتوى} other{المحتوى}} {title}؟",
+    "@entityDeletedMessage" :{
+      "description": "A message with a single parameter",
+      "placeholders": {
+        "entityType": {
+          "type": "String",
+          "example": "category, tags"
+        },
+       "title": {
+          "type": "String",
+          "example": "category, tags"
+        }
+      }
+      },
+    "entityDeletedSuccessMessage": "تم حذف {entityType, select, taxonomy{التصنيف} node{المحتوى} other{المحتوى}} {title} بنجاح!",
+    "@entityDeletedSuccessMessage" :{
+      "description": "A message with a single parameter",
+      "placeholders": {
+        "entityType": {
+          "type": "String",
+          "example": "category, tags"
+        },
+       "title": {
+          "type": "String",
+          "example": "category, tags"
+        }
+      }
+      },
+    "entityDeletedErrorMessage":"حدث خطأ أثناء حذف {entityType, select, taxonomy{التصنيف} node{المحتوى} other{المحتوى}} {title} ، يرجى المحاولة مرة أخرى لاحقًا أو الاتصال بمسؤول النظام",
+    "@entityDeletedErrorMessage" :{
+      "description": "A message with a single parameter",
+      "placeholders": {
+        "entityType": {
+          "type": "String",
+          "example": "category, tags"
+        },
+       "title": {
+          "type": "String",
+          "example": "category, tags"
+        }
+      }
+      },
+    "entityUpdatedSuccessMessage":" تعديل {entityType, select, taxonomy{التصنيف} node{المحتوى} other{المحتوى}} {title}",
+    "@entityUpdatedSuccessMessage" :{
+      "description": "A message with a single parameter",
+      "placeholders": {
+        "entityType": {
+          "type": "String",
+          "example": "category, tags"
+        },
+       "title": {
+          "type": "String",
+          "example": "category, tags"
+        }
+      }
+      },
+    "entityCreatedSuccessMessage":"تم إنشاء {entityType, select, taxonomy{التصنيف} node{المحتوى} other{المحتوى}} جديد {title}",
+    "@entityCreatedSuccessMessage" :{
+      "description": "A message with a single parameter",
+      "placeholders": {
+        "entityType": {
+          "type": "String",
+          "example": "category, tags"
+        },
+       "title": {
+          "type": "String",
+          "example": "category, tags"
+        }
+      }
+      },
+    "parentTerm":"التصنيف الأعلى",
+    "selectParent":"اختر علاقة",
+    "relations":"العلاقات",   
+    "published": "نشر",  
+    "title": "العنوان",
+    "body": "المحتوى",
+    "fieldName": "الاسم",  
+    "fieldDescription": "الوصف",
+    "fieldAlias": "الاسم المستعار لعنوان URL",
+    "fieldAliasDescription":  "حدد مسارًا بديلاً يمكن من خلاله الوصول إلى هذه البيانات. على سبيل المثال ، اكتب \" about \" عند كتابة صفحة حول.",
+    "statusMessage": "رسالة الحالة",
+    "noTermsAvailable": "لا يوجد تصنيف متاح",
+    "taxonomiesList" : "قائمة التصنيفات",
+    "vocabulariesListTitle": "تصنيفات",
+    "nodeTypeList" : "المحتوى",
+    "profile": "الحساب",
+    "sideBarMenuItemProfile": "الحساب",
+    "sideBarMenuItemSettings": "الإعدادات",
+    "sideBarMenuItemLogout": "تسجيل خروج",
+    "sideBarMenuItemPeople":"المستخدمين",
+    "pageUsers":"المستخدمين",
+    "upload": "رفع",
+    "emptyData":"لا يوجد بيانات",
+    "addCaption": "أضف تسمية توضيحية...",
+    "done":"تم"
+  }

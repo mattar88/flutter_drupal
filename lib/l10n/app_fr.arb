@@ -1,0 +1,134 @@
+{   
+  "dark":"Noir",
+  "light":"Light",
+  "display":"Affichage",
+  "translate": "Traduire",
+  "darkMode": "Mode sombre",
+  "settings":"paramètres",
+  "languages": "Langues",
+  "edit": "modifier",
+  "delete": "supprimer",
+  "add": "ajouter",
+  "create": "créer",
+  "cancel": "annuler",
+  "save":"Sauvegarder",
+  "confirm": "Confirmer",
+  "deviceLanguage":"Langue de l'appareil",
+  "useSystemSettings": "Utiliser les paramètres système",
+  "node":"Nœud",
+  "taxonomy":"Taxonomie",
+  "listOf" : "Liste de {title}",
+  "@listOf" :{
+  "placeholders": {
+  "title": {
+        "type": "String",
+        "example": "category, tags"
+        }
+    }
+    },
+    "translationsOf": "Traductions de {title}",
+    "@translationsOf" :{
+      "description": "The title for translation page for entities",
+      "placeholders": {
+       "title": {
+          "type": "String"
+        }
+      }
+      },
+    "submitting": "Envoi...",
+    "entityDeletedMessage": "Êtes-vous sûr de vouloir supprimer la {entityType, select, taxonomy{taxonomie} node{nœud} other{entité}} {title} ?",
+    "@entityDeletedMessage" :{
+      "description": "A message with a single parameter",
+      "placeholders": {
+        "entityType": {
+          "type": "String",
+          "example": "category, tags"
+        },
+       "title": {
+          "type": "String",
+          "example": "category, tags"
+        }
+      }
+      },
+    "entityDeletedSuccessMessage": "La {entityType, select, taxonomy{taxonomy} node{node} other{entity}} {title} a été supprimée avec succès !",
+    "@entityDeletedSuccessMessage" :{
+      "description": "A message with a single parameter",
+      "placeholders": {
+        "entityType": {
+          "type": "String",
+          "example": "category, tags"
+        },
+       "title": {
+          "type": "String",
+          "example": "category, tags"
+        }
+      }
+      },
+    "entityDeletedErrorMessage":"Une erreur s'est produite lors de la suppression de la {entityType, select, taxonomy{taxonomy} node{node} other{entity}} {title}, veuillez réessayer plus tard ou contactez votre administrateur système",
+    "@entityDeletedErrorMessage" :{
+      "description": "A message with a single parameter",
+      "placeholders": {
+        "entityType": {
+          "type": "String",
+          "example": "category, tags"
+        },
+       "title": {
+          "type": "String",
+          "example": "category, tags"
+        }
+      }
+      },
+    "entityUpdatedSuccessMessage":"{entityType, select, taxonomy{taxonomy} node{node} other{entity}} mise à jour {title}",
+    "@entityUpdatedSuccessMessage" :{
+      "description": "A message with a single parameter",
+      "placeholders": {
+        "entityType": {
+          "type": "String",
+          "example": "category, tags"
+        },
+       "title": {
+          "type": "String",
+          "example": "category, tags"
+        }
+      }
+      },
+    "entityCreatedSuccessMessage":"Création d'une nouvelle {entityType, select, taxonomy{taxonomy} node{node} other{entity}} {title}",
+    "@entityCreatedSuccessMessage" :{
+      "description": "A message with a single parameter",
+      "placeholders": {
+        "entityType": {
+          "type": "String",
+          "example": "category, tags"
+        },
+       "title": {
+          "type": "String",
+          "example": "category, tags"
+        }
+      }
+      },
+    "parentTerm":"Terme parent",
+    "selectParent":"Sélectionnez un parent",
+    "relations":"Relations",    
+    "published": "Publié",
+    "title":"Titre",
+    "body": "Corps",
+    "fieldName": "Nom",  
+    "fieldDescription": "Description",
+    "fieldAlias": "Url alias",
+    "fieldAliasDescription":  "Spécifiez un autre chemin permettant d'accéder à ces données. Par exemple, saisissez \"/about\" lorsque vous écrivez une page about.",
+    "statusMessage": "Message d'état",
+    "noTermsAvailable": "Aucun terme disponible",
+    "taxonomiesList" : "Liste des taxonomies",
+    "vocabulariesListTitle": "Taxonomie",
+    "nodeTypeList" : "nœuds",
+    "profile": "Profil",
+    "sideBarMenuItemProfile": "Profil",
+    "sideBarMenuItemSettings": "Paramètres",
+    "sideBarMenuItemLogout": "Se déconnecter",
+    "sideBarMenuItemPeople":"Utilisateurs",
+    "pageUsers":"Utilisateurs",
+    "upload": "Mettre en ligne",
+    "emptyData":"Données vides",
+    "addCaption": "Ajouter une légende...",
+    "done":"fait"
+}

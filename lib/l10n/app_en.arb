@@ -1,0 +1,135 @@
+{
+  "dark":"Dark",
+  "light":"Light",
+  "translate": "Translate",
+  "display":"Display",
+  "darkMode": "Dark Mode",
+  "settings":"Settings",
+  "languages": "Languages",
+  "edit": "edit",
+  "delete": "delete",
+  "add": "add",
+  "create": "create",
+  "cancel": "cancel",
+  "save":"Save",
+  "confirm": "Confirm",
+  "deviceLanguage":"Device language",
+  "useSystemSettings": "Use system settings",
+  "node":"Node",
+  "taxonomy":"Taxonomy",
+  "listOf" : "List of {title}",
+  "@listOf" :{
+  "placeholders": {
+   "title": {
+      "type": "String",
+      "example": "category, tags"
+    }
+  }
+  },
+  "translationsOf": "Translations of {title}",
+  "@translationsOf" :{
+    "description": "The title for translation page for entities",
+    "placeholders": {
+     "title": {
+        "type": "String"
+      }
+    }
+    },
+  "submitting": "Submitting...",
+
+  "entityDeletedMessage": "Are you sure you want to delete the {entityType, select, taxonomy{taxonomy} node{node} other{entity}} {title} ?",
+  "@entityDeletedMessage" :{
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "entityType": {
+        "type": "String",
+        "example": "category, tags"
+      },
+     "title": {
+        "type": "String",
+        "example": "category, tags"
+      }
+    }
+    },
+  "entityDeletedSuccessMessage": "The  {entityType, select, taxonomy{taxonomy} node{node} other{entity}} {title} has been deleted successfully!",
+  "@entityDeletedSuccessMessage" :{
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "entityType": {
+        "type": "String",
+        "example": "category, tags"
+      },
+      "title": {
+         "type": "String",
+         "example": "category, tags"
+       }
+     }
+    },
+  "entityDeletedErrorMessage":"An error occurred while deleting the  {entityType, select, taxonomy{taxonomy} node{node} other{entity}} {title}, please try again later or contact your system administrator",
+  "@entityDeletedErrorMessage" :{
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "entityType": {
+        "type": "String",
+        "example": "category, tags"
+      },
+      "title": {
+         "type": "String",
+         "example": "category, tags"
+       }
+     }
+    },
+  "entityUpdatedSuccessMessage":"Updated  {entityType, select, taxonomy{taxonomy} node{node} other{entity}} {title}",
+  "@entityUpdatedSuccessMessage" :{
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "entityType": {
+        "type": "String",
+        "example": "category, tags"
+      },
+      "title": {
+         "type": "String",
+         "example": "category, tags"
+       }
+     }
+    },
+  "entityCreatedSuccessMessage":"Created new  {entityType, select, taxonomy{taxonomy} node{node} other{entity}} {title}",
+  "@entityCreatedSuccessMessage" :{
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "entityType": {
+        "type": "String",
+        "example": "category, tags"
+      },
+      "title": {
+         "type": "String",
+         "example": "category, tags"
+       }
+     }
+    },
+  "parentTerm":"Parent term",
+  "selectParent":"Select parent",
+  "relations":"Relations",  
+  "published": "Published",  
+  "title": "Title",
+  "body": "Body",
+  "fieldName": "Name",  
+  "fieldDescription": "Description",
+  "fieldAlias": "Url alias",
+  "fieldAliasDescription":  "Specify an alternative path by which this data can be accessed. For example, type \"/about\" when writing an about page.",
+  "statusMessage": "Status message",
+  "noTermsAvailable": "No terms available",
+  "taxonomiesList" : "Taxonomies list",
+  "vocabulariesListTitle": "Taxonomy",
+  "nodeTypeList" : "Content",
+  "profile": "Profile",
+  "sideBarMenuItemProfile": "Profile",
+  "sideBarMenuItemSettings": "Settings",
+  "sideBarMenuItemLogout": "Logout",
+  "sideBarMenuItemPeople":"People",
+  "pageUsers":"People",
+  "upload": "Upload",
+  "emptyData": "Empty data",
+  "addCaption": "Add a caption...",
+  "done":"Done"
+}

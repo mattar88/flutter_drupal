@@ -1,0 +1,13 @@
+1.Deprecated----> Translations: you could't delete any translated node(have language other than defaultlanguage) because it not supported by JSONAPI
+if you want to delete it you can use the web app.
+ 
+2.We use countryCode as prefix for URL to load settings label and descriptions, in addition for CRUD Operation on entities
+Without this prefix you cannot delete, Edit, Add any translated entities.
+more information: https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/translations
+
+We use LangCode as queryString parameter to load the list of translated entities depend on this parameter value
+
+3. In we the scope is used to limit Application's access by user account so
+   it give a user's token access additional role although may he dont have it, so the user have 2 roles with this token
+   and one with web access
+

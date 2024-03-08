@@ -1,0 +1,1 @@
+enum EntityAction { add, edit }
