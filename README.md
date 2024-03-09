@@ -1,16 +1,18 @@
-# flutter_drupal
+# Flutter Template for Drupal CMS
 
-A new Flutter project.
+ Flutter Getx project is a robust and clean Template to build an App that integrates all functionality of Drupal Using REST API(JSONAPI core module), In this project I used the powerful features of Getx like state management, Dependency injection, route management, and in other side the Drupal core JSON:API module implements the JSON:API spec for Drupal entities. It provides a zero-configuration required, opinionated, way to allow RESTful CRUD for a Drupal site's content.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Features
+ * Multilingual, Drupal localization integrated with flutter localizations
+ *  [Material Theme Builder](https://m3.material.io/theme-builder)
+ *   Dark and Light themes
+ *  Role-based access control (RBAC), Roles & Permissions
+ *  Authorization and Authentication using the [Oauth2](https://oauth.net/2/) protocol
+ *  Membership
+ *  Nodes management CRUD
+ *  Taxonomies management CRUD  with parent hierarchy
+ *  Taxonomy field reference 
+ *  Images field with multiple upload ability
+ *  Use Flutter [Getx](https://pub.dev/packages/get) package
+ *  All [Drupal](https://drupal.org/) functionality implemented using  [JSON:API](https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/api-overview)
+ *  Development and production modes
