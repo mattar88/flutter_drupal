@@ -16,7 +16,7 @@
  *  All [Drupal](https://drupal.org/) functionality implemented using  [JSON:API](https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/api-overview)
  *  Development and production modes
 ## Architecture 
- <img src="./screenshots/architecture.png" wiidth="300">
+ <img src="./screenshots/architecture.jpg" wiidth="300">
 
 # run this project by command line
 Dev: `flutter run --flavor dev lib/main_dev.dart`
