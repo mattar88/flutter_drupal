@@ -16,7 +16,7 @@
  *  All [Drupal](https://drupal.org/) functionality implemented using  [JSON:API](https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/api-overview)
  *  Development and production modes
 ## Architecture 
- <img src="https://raw.githubusercontent.com/mattar88/auth_login_register_flutter_getx/main/screenshots/architecture.png" wiidth="300">
+ <img src="./screenshots/architecture.png" wiidth="300">
 
 # run this project by command line
 Dev: `flutter run --flavor dev lib/main_dev.dart`
@@ -28,7 +28,7 @@ Prod: `flutter run --flavor prod lib/main_prod.dart`
 ``````
 PS > flutter --version
 Flutter 3.7.8 • channel stable • https://github.com/flutter/flutter.git
-Framework • revision 90c64ed42b (3 weeks ago) • 2023-03-21 11:27:08 -0500
+Framework • revision 90c64ed42b (12 months ago) • 2023-03-21 11:27:08 -0500
 Engine • revision 9aa7816315
 Tools • Dart 2.19.5 • DevTools 2.20.1
 ``````
@@ -36,14 +36,34 @@ Tools • Dart 2.19.5 • DevTools 2.20.1
 ``````
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   get: ^4.6.5
   equatable: ^2.0.3
   http: ^0.13.4
-  get_storage: ^2.0.3
   internet_connection_checker: ^0.0.1+3
   oauth2: ^2.0.0
   webview_flutter: ^4.4.2
+  chips_input: ^0.1.0
+  lazy_load_scrollview: ^1.3.0
+  flutter_slidable: ^2.0.0
+  wp_search_bar: ^0.1.4
+  multi_select_flutter: ^4.1.3
+  google_fonts: ^4.0.3
+  skeletons: ^0.0.3
+  image_field: ^0.0.8
+  image_picker: ^1.0.4
+  scrollable_positioned_list: ^0.3.8  
+  carousel_slider: ^4.2.1
+  shared_preferences: ^2.2.2
+  path_provider: ^2.1.1
+  timezone: ^0.9.2
+  logger: ^2.1.0
 ``````
 
 ## How to update app information and continue development for your own project?
