@@ -1,6 +1,7 @@
 # Flutter Template for Drupal CMS (Getx, MVVM)
 
  Flutter Getx template follows [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) (Model View ViewModel) architectural pattern to build a robust and clean App that integrates all functionality of Drupal Using REST API(JSONAPI core module), In this project I used the powerful features of Getx like state management, Dependency injection, route management.
+
 ## Features
  * Multilingual, Drupal localization integrated with flutter localizations
  *  [Material Theme Builder](https://m3.material.io/theme-builder)
@@ -17,11 +18,6 @@
  *  Development and production modes
 ## Architecture 
  <img src="./screenshots/architecture.jpg" wiidth="300">
-
-# run this project by command line
-Dev: `flutter run --flavor dev lib/main_dev.dart`
-
-Prod: `flutter run --flavor prod lib/main_prod.dart`
 
 
 ## Flutter Version
@@ -65,6 +61,22 @@ Tools • Dart 2.19.5 • DevTools 2.20.1
   timezone: ^0.9.2
   logger: ^2.1.0
 ``````
+## Install Flutter(Frontend Mobile App)
+1. Download the Flutter version mentioned above
+2. Clone the project
+3. Open`````` lib  > main_dev.dart``````  then set the variables
+``````
+  EnvConfig devConfig = EnvConfig(
+    appName: "Flutter Drupal Dev",
+    baseUrl: "", //Do not add "/" at the end
+    clientId: "",
+    clientSecret: "",
+    shouldCollectCrashLog: true,
+  );
+  ``````
+## Install Drupal(Web App)
+1. [Install Drupal from scratch](https://drupal.org/) 
+2. [Update existing Drupal Web App](https://drupal.org/)
 
 ## How to update app information and continue development for your own project?
 
@@ -75,23 +87,7 @@ Tools • Dart 2.19.5 • DevTools 2.20.1
 
 `flutter pub run change_app_package_name:main your_package_name`
 
-## Installation
-1. Download Flutter version mentioned above
-2. Clone the project
-
-3. Open`````` lib  > main_dev.dart``````  then set the variables
-``````
-  //Example: https://www.example.com without /
-  baseUrl = '';
-  ``````
-  Open`````` lib  > main_prod.dart``````  then set the variables
-   ``````
-  //Example: https://www.example.com without /
-  baseUrl = '';
-  ``````
-
-4.  In the same file `````` lib > app > services > auth_api_service.dart.dart``````  set the Client Id and Client Secret of your app
-``````
-  static const String clientId = 'CLIENT_ID';
-  static const String clientSecret = 'CLIENT_SECRET';
-``````
+# run this project by command line
+Dev: `flutter run --flavor dev lib/main_dev.dart`
+Prod: `flutter run --flavor prod lib/main_prod.dart`
+ 
