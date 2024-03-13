@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:logger/logger.dart';
 
 import '../app/values/app_values.dart';
@@ -5,8 +7,11 @@ import '../app/values/app_values.dart';
 class EnvConfig {
   final String appName;
   final String baseUrl;
-  final bool shouldCollectCrashLog;
   final String? apiPathPrefix;
+  final String? clientId;
+  final String? clientSecret;
+  String? callbackPath;
+  final bool shouldCollectCrashLog;
 
   /// if false hide the form login
   final bool loginWithPassword;
@@ -19,12 +24,17 @@ class EnvConfig {
   EnvConfig(
       {required this.appName,
       required this.baseUrl,
-      this.apiPathPrefix,
+      required this.clientId,
+      required this.clientSecret,
+      this.callbackPath,
+      this.apiPathPrefix = "jsonapi",
       this.shouldCollectCrashLog = false,
       this.loginWithPassword = true,
       this.signupWithPassword = true})
       : assert(!baseUrl.endsWith('/'),
             'The baseUrl should not have "/" at the end') {
+    callbackPath ??= '$baseUrl/';
+
     logger = Logger(
       printer: PrettyPrinter(
           methodCount: AppValues.loggerMethodCount,

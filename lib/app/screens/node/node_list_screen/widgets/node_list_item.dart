@@ -9,7 +9,7 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get.dart';
 
 import '../../../../routes/app_pages.dart';
-import '../../../../config/config_locale.dart';
+import '../../../../locale/config_locale.dart';
 import '../../../../controllers/node/node_list_controller.dart';
 import '../../../../mixins/helper_mixin.dart';
 import '../../../../models/enum/message_status.dart';

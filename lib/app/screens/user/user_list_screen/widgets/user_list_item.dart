@@ -4,7 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get.dart';
 
-import '../../../../config/config_locale.dart';
+import '../../../../locale/config_locale.dart';
 import '../../../../controllers/user/user_list_controller.dart';
 import '../../../../mixins/helper_mixin.dart';
 import '../../../../models/user_model.dart';

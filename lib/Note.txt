@@ -7,7 +7,7 @@ more information: https://www.drupal.org/docs/core-modules-and-themes/core-modul
 
 We use LangCode as queryString parameter to load the list of translated entities depend on this parameter value
 
-3. In we the scope is used to limit Application's access by user account so
+3.The scope is used to limit Application's access by user account so
    it give a user's token access additional role although may he dont have it, so the user have 2 roles with this token
    and one with web access
 

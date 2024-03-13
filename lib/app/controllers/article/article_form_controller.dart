@@ -3,7 +3,7 @@ import 'dart:developer';
 import '../../models/node/article_model.dart';
 import 'package:get/get.dart';
 
-import '../../config/config_locale.dart';
+import '../../locale/config_locale.dart';
 import '../../models/enum/entity_action.dart';
 import '../../models/file_model.dart';
 import '../../models/taxonomy/taxonomy_model.dart';

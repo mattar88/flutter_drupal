@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import '../../config/config_locale.dart';
+import '../../locale/config_locale.dart';
 
 class NodeTypeModel {
   late String? id;

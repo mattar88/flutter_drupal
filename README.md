@@ -74,9 +74,16 @@ Tools • Dart 2.19.5 • DevTools 2.20.1
     shouldCollectCrashLog: true,
   );
   ``````
+  the same for main_prod.dart
+  
 ## Install Drupal(Web App)
-1. [Install Drupal from scratch](https://drupal.org/) 
-2. [Update existing Drupal Web App](https://drupal.org/)
+1. [Install Drupal from scratch](./drupal/install_drupal.md) 
+2. [Update existing Drupal Web App](./drupal/install_drupal.md)
+
+# run this project by command line
+Dev: `flutter run --flavor dev lib/main_dev.dart`
+
+Prod: `flutter run --flavor prod lib/main_prod.dart`
 
 ## How to update app information and continue development for your own project?
 
@@ -87,7 +94,5 @@ Tools • Dart 2.19.5 • DevTools 2.20.1
 
 `flutter pub run change_app_package_name:main your_package_name`
 
-# run this project by command line
-Dev: `flutter run --flavor dev lib/main_dev.dart`
-Prod: `flutter run --flavor prod lib/main_prod.dart`
+
  

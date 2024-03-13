@@ -3,7 +3,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get/get.dart';
 
 import '../..../../../routes/app_pages.dart';
-import '../../config/config_locale.dart';
+import '../../locale/config_locale.dart';
 import '../../controllers/languages_controller.dart';
 import '../../models/node/node_model.dart';
 import '../../values/app_values.dart';

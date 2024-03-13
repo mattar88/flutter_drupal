@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../config/config_locale.dart';
+import '../../locale/config_locale.dart';
 import '../../models/taxonomy/taxonomy_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get/get.dart';

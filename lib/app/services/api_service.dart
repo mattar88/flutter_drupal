@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import 'package:oauth2/oauth2.dart';
 
 import '../../flavors/build_config.dart';
-import '../config/config_locale.dart';
+import '../locale/config_locale.dart';
 import '../controllers/auth_controller.dart';
 import '../mixins/helper_mixin.dart';
 import '../routes/app_pages.dart';

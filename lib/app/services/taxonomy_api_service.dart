@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 
-import '../config/config_locale.dart';
+import '../locale/config_locale.dart';
 import '../models/taxonomy/taxonomy_model.dart';
 import 'api_service.dart';
 

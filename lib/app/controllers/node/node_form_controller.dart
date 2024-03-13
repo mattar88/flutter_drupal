@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-import '../../config/config_locale.dart';
+import '../../locale/config_locale.dart';
 import '../../models/enum/entity_action.dart';
 import '../../models/node/node_model.dart';
 import '../../services/node_api_service.dart';

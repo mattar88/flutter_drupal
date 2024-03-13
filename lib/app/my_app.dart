@@ -10,7 +10,7 @@ import './controllers/auth_controller.dart';
 import './controllers/languages_controller.dart';
 import './controllers/theme_mode_controller.dart';
 import './values/color_schemes.g.dart';
-import 'config/config_locale.dart';
+import 'locale/config_locale.dart';
 import 'routes/app_pages.dart';
 import 'services/auth_api_service.dart';
 import 'services/cache_service.dart';

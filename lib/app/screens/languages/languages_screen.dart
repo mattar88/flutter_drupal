@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../widgets/Labeled_radio.dart';
 import 'package:get/get.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import '../../config/config_locale.dart';
+import '../../locale/config_locale.dart';
 import '../../controllers/languages_controller.dart';
 import '../../models/Locale_content.dart';
 import '../base_screen.dart';

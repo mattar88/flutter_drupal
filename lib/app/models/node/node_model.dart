@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:intl/intl.dart';
 
-import '../../config/config_locale.dart';
+import '../../locale/config_locale.dart';
 import '../../access/access.dart';
 import '../user_model.dart';
 

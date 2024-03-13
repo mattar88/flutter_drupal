@@ -25,7 +25,7 @@ class AuthApiService extends ApiService {
 // client. The redirection will include the authorization code in the
 // query parameters.
 
-  get redirectUrl => '$baseUrl/';
+  get redirectUrl => BuildConfig.instance.config.callbackPath;
 
   get authorizationEndpoint => Uri.parse(baseUrl + authorizationUrl);
   get tokenEndpoint => Uri.parse(baseUrl + refreshTokenUrl);
@@ -39,8 +39,8 @@ class AuthApiService extends ApiService {
 // available may not be able to make sure the client secret is kept a
 // secret. This is fine; OAuth2 servers generally won't rely on knowing
 // with certainty that a client is who it claims to be.
-  String clientId = '';
-  String clientSecret = '';
+  String clientId = BuildConfig.instance.config.clientId!;
+  String clientSecret = BuildConfig.instance.config.clientSecret!;
 
   /// A file in which the users credentials are stored persistently. If the server
   /// issues a refresh token allowing the client to refresh outdated credentials,
@@ -67,6 +67,7 @@ class AuthApiService extends ApiService {
         secret: clientSecret);
     // A URL on the authorization server (authorizationEndpoint with some additional
     // query parameters). Scopes and state can optionally be passed into this method.
+    log('redirectUrl: ${redirectUrl}');
     return _grant.getAuthorizationUrl(
       Uri.parse(redirectUrl),
       // scopes: ['access_token'],

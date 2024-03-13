@@ -7,7 +7,7 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get.dart';
 
 import '../../../../access/access.dart';
-import '../../../../config/config_locale.dart';
+import '../../../../locale/config_locale.dart';
 import '../../../../controllers/taxonomy/taxonomy_list_controller.dart';
 import '../../../../dialogs/fd_dialog.dart';
 import '../../../../mixins/helper_mixin.dart';
