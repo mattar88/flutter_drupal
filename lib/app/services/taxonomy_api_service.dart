@@ -7,7 +7,6 @@ import 'api_service.dart';
 
 class TaxonomyApiService extends ApiService {
   static String taxonomyPath = '/taxonomy_term';
-  final bool localeEnabled = true;
 
   Map<String, Map<String, dynamic>> _filterListQueryCache = {};
 
@@ -16,7 +15,8 @@ class TaxonomyApiService extends ApiService {
       String? text,
       String? operation,
       int? offset,
-      int? limit}) async {
+      int? limit,
+      bool localeEnabled = false}) async {
     Map<String, dynamic> filterQuery = {};
     var filterNameQuery = '${text}_$filterName';
     // bool allFiltersEmpty =
@@ -94,14 +94,15 @@ class TaxonomyApiService extends ApiService {
       filterQuery['page[limit]'] = limit.toString();
     }
 
-    return getTaxonomiesByFilter(vocabulary, filterQuery);
+    return getTaxonomiesByFilter(vocabulary, filterQuery, localeEnabled);
   }
 
   Future<List<TaxonomyModel>?> list(String vocabulary,
       {String? name,
       String condition = 'CONTAINS',
       int? offset,
-      int? limit}) async {
+      int? limit,
+      bool localeEnabled = false}) async {
     var filterName = '${vocabulary}filterByName';
     Map<String, dynamic> filter = {};
     if (offset != null && limit != null) {
@@ -114,12 +115,12 @@ class TaxonomyApiService extends ApiService {
       filter['filter[$filterName][condition][operator]'] = condition;
     }
     log('Filterrrr --- ${filter}');
-    return getTaxonomiesByFilter(vocabulary, filter);
+    return getTaxonomiesByFilter(vocabulary, filter, localeEnabled);
   }
 
-  Future<List<TaxonomyModel>?> getTaxonomiesByFilter(
-      String vocabulary, Map<String, dynamic> filter) async {
-    if (localeEnabled) {
+  Future<List<TaxonomyModel>?> getTaxonomiesByFilter(String vocabulary,
+      Map<String, dynamic> filter, bool localeEnabled) async {
+    if (localeEnabled && ConfigLocale.supportedLocales) {
       filter['filter[langcode]'] =
           ConfigLocale.currentLocale.locale.languageCode;
     }

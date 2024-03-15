@@ -16,7 +16,6 @@ import 'api_service.dart';
 
 class NodeApiService<T> extends ApiService {
   String nodePath = '/node';
-  final bool localeEnabled = true;
 
   final Function(Map<String, dynamic> json) fromJson;
   NodeApiService(this.fromJson);
@@ -115,7 +114,8 @@ class NodeApiService<T> extends ApiService {
       String? text,
       String? operation,
       int? offset,
-      int? limit}) async {
+      int? limit,
+      bool localeEnabled = false}) async {
     Map<String, dynamic> filterQuery = {};
     var filterTitleQuery = '${text}_$filterTitle';
     // bool allFiltersEmpty =
@@ -191,17 +191,18 @@ class NodeApiService<T> extends ApiService {
       filterQuery['page[limit]'] = limit.toString();
     }
 
-    return getNodesByFilter(nodeType, filterQuery);
+    return getNodesByFilter(nodeType, filterQuery, localeEnabled);
   }
 
   Future<List<T>?> getNodesByFilter(
-      String nodeType, Map<String, dynamic> filter) async {
-    if (localeEnabled) {
+      String nodeType, Map<String, dynamic> filter, bool localeEnabled) async {
+    if (localeEnabled && ConfigLocale.supportedLocales!.isNotEmpty) {
       filter['filter[langcode]'] =
           ConfigLocale.currentLocale.locale.languageCode;
     }
     var response = await get('$nodePath/$nodeType', query: filter);
     var result = jsonDecode(response.body);
+    log('REsult: log: ${result.toString()}');
     if (response.isOk) {
       return List<T>.from(result['data']
           .map((nodeJson) => fromJson({'data': nodeJson}))
@@ -216,7 +217,8 @@ class NodeApiService<T> extends ApiService {
       {String? title,
       String condition = 'CONTAINS',
       int? offset,
-      int? limit}) async {
+      int? limit,
+      bool localeEnabled = false}) async {
     var filterTitle = '${nodeType}filterByTitle';
     Map<String, dynamic> filter = {};
     if (offset != null && limit != null) {
@@ -229,7 +231,7 @@ class NodeApiService<T> extends ApiService {
       filter['filter[$filterTitle][condition][operator]'] = condition;
     }
     log('Filterrrr --- ${filter}');
-    return getNodesByFilter(nodeType = nodeType, filter = filter);
+    return getNodesByFilter(nodeType, filter, localeEnabled);
   }
 
   Future<T?> load(String nodeType, String id, {List<String>? include}) async {
@@ -255,13 +257,22 @@ class NodeApiService<T> extends ApiService {
     log('create--------${node.toJson()}');
     var response = await post('$nodePath/${node.type}', node.toJson());
     var result = jsonDecode(response.body);
+
     if (response.isOk) {
       return fromJson(result);
     } else {
-      var addMsg = result['error_messages'];
+      String addMsg = result['error_messages'];
       if (response.statusCode == HttpStatus.unprocessableEntity) {
         addMsg +=
             'Maybe the uploaded file exceeds the limit allowed in the field settings';
+      }
+      if (response.statusCode == HttpStatus.forbidden) {
+        if (addMsg.contains('(langcode)')) {
+          addMsg +=
+              'You do not configure the language settings correctly in node type (${node.type}),';
+          addMsg +=
+              'So please check the (Show language selector on create and edit pages) and (Enable translation) options, in order to post translated entities.';
+        }
       }
       throw Exception(
           'An error occurred when creating an node ($addMsg), please try again!');

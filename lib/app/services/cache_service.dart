@@ -1,11 +1,9 @@
 import 'dart:convert';
-import 'dart:developer';
 
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../mixins/helper_mixin.dart';
-import '../models/user_model.dart';
 import '../models/user_oauth_model.dart';
 
 class CacheService extends GetxService with HelperMixin {

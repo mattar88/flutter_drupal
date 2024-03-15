@@ -10,6 +10,7 @@ import '../../services/node_api_service.dart';
 class NodeListController extends NodeController {
   final NodeApiService _nodeApiService;
   final String nodeType;
+  final bool localeEnabled = true;
 
   Rxn<bool> isLoading = Rxn<bool>(false);
   var list = RxList(<NodeModel>[]);
@@ -200,7 +201,8 @@ class NodeListController extends NodeController {
           filterTitle: filterName,
           text: text,
           offset: offset,
-          limit: limit))! as Iterable<NodeModel>);
+          limit: limit,
+          localeEnabled: localeEnabled))! as Iterable<NodeModel>);
       isLoading.value = false;
       reachTheEnd.value = false;
 

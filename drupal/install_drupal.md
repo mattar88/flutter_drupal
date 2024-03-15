@@ -64,13 +64,13 @@ click on the extend on the menu or go to the path ```/admin/modules``` scrolldow
   ![Enable the web services modules](./screenshots/modules_webservices.png)
 
 
-### 7-Configure jsonpai by go to the path ```/admin/config/services/jsonapi```
+### 7-Configure jsonpai by going to the path ```/admin/config/services/jsonapi```
 then select ```Accept all JSON:API create, read, update, and delete operations.```
 
    ![config jsonapi](./screenshots/config_jsonapi.png)
 
 
-### 7-Configure REST resources by go to the path ```/admin/config/services/rest```
+### 7-Configure REST resources by going to the path ```/admin/config/services/rest```
 then enable User with GET method
 and User registration with POST mehtod
 
@@ -100,3 +100,15 @@ and User registration with POST mehtod
 
 Then assign the following permissions to the authenticated user:
  * Grant OAuth2 codes
+
+ # Enable Multilingual
+ ### 1-In order to make your app translatable, go to Extend or path ```admin/modules```  in Multilingual section then select all modules.
+
+ ### 2-Add a language using the path ```admin/config/regional/language```
+
+ ### 3-Configure ```Content Translation``` using the path ```admin/config/regional/content-language```
+  * you can enable ```Content``` and ```URL alias```
+ 
+ ### Translate node by going to the path ```admin/structure/types``` then edit the node type that you want to translate then scroll down to ```Language settings``` then check the following options:
+ * Show language selector on create and edit pages
+ * Enable translation

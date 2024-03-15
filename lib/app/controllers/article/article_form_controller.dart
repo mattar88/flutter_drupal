@@ -59,7 +59,7 @@ class ArticleFormController extends NodeFormController<ArticleModel> {
             langcode: isEditing
                 ? node.langcode
                 : ConfigLocale.currentLocale.locale.languageCode);
-        log('Helloooo: ${titleController.text}');
+
         if (isEditing) {
           var node = (await _nodeApiService.update(submitedNode));
           log('After submittinnng....');

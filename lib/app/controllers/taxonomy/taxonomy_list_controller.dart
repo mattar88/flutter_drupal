@@ -11,7 +11,7 @@ import 'package:get/get.dart';
 class TaxonomyListController extends TaxonomyController {
   final TaxonomyApiService _taxonomyApiService;
   final String vocabulary;
-
+  final bool localeEnabled = true;
   Rxn<bool> isLoading = Rxn<bool>(false);
   var list = RxList(<TaxonomyModel>[]);
   var reachTheEnd = Rxn<bool>(false);
@@ -85,7 +85,8 @@ class TaxonomyListController extends TaxonomyController {
               filterName: filterSelected,
               text: value,
               offset: 0,
-              limit: range));
+              limit: range,
+              localeEnabled: localeEnabled));
 
           if (onSearchQueryCount == 1) {
             isLoading.value = false;
@@ -193,12 +194,20 @@ class TaxonomyListController extends TaxonomyController {
   }
 
   Future<void> filterList(String vocabulary,
-      {String? filterName, String? text, int? offset, int? limit}) async {
+      {String? filterName,
+      String? text,
+      int? offset,
+      int? limit,
+      bool localeEnabled = false}) async {
     try {
       isLoading.value = true;
 
       list.addAll((await _taxonomyApiService.filterList(vocabulary,
-          filterName: filterName, text: text, offset: offset, limit: limit))!);
+          filterName: filterName,
+          text: text,
+          offset: offset,
+          limit: limit,
+          localeEnabled: localeEnabled))!);
       isLoading.value = false;
       reachTheEnd.value = false;
 

@@ -10,10 +10,18 @@ class NodeController<T> extends BaseController {
   NodeController(this._nodeApiService);
 
   Future<List<T>?> getNodes(String nodeType,
-      {String? title, String condition = 'CONTAINS', offset, limit}) async {
+      {String? title,
+      String condition = 'CONTAINS',
+      offset,
+      limit,
+      bool localeEnabled = false}) async {
     try {
       return await _nodeApiService.list(nodeType,
-          title: title, condition: condition, offset: offset, limit: limit);
+          title: title,
+          condition: condition,
+          offset: offset,
+          limit: limit,
+          localeEnabled: localeEnabled);
     } catch (e) {
       printError(info: e.toString());
       rethrow;

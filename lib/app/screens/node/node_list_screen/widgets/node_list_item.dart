@@ -109,20 +109,21 @@ class NodeListItem extends GetView<NodeListController> {
 
                 // All actions are defined in the children parameter.
                 children: [
-                  if (ConfigLocale.supportedLocalesData.isEmpty)
-                    SlidableAction(
-                      flex: 1,
-                      icon: Icons.translate,
-                      label: T.translate,
-                      backgroundColor: Theme.of(context).colorScheme.primary,
-                      // borderRadius: BorderRadius.circular(30),
-                      // autoClose: false,
+                  //Not supported missing references between entities trnaslated
+                  // if (ConfigLocale.supportedLocalesData.isNotEmpty)
+                  //   SlidableAction(
+                  //     flex: 1,
+                  //     icon: Icons.translate,
+                  //     label: T.translate,
+                  //     backgroundColor: Theme.of(context).colorScheme.primary,
+                  //     // borderRadius: BorderRadius.circular(30),
+                  //     // autoClose: false,
 
-                      onPressed: (BuildContext context) {
-                        Get.to(NodeTranslationsScreen(node: node),
-                            transition: Transition.noTransition);
-                      },
-                    ),
+                  //     onPressed: (BuildContext context) {
+                  //       Get.to(NodeTranslationsScreen(node: node),
+                  //           transition: Transition.noTransition);
+                  //     },
+                  //   ),
                   SlidableAction(
                     flex: 1,
                     label: T.edit,

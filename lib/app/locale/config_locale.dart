@@ -17,10 +17,10 @@ class ConfigLocale {
   ///To disable it just put [] as a value
   ///
   static List<LocaleModel> get supportedLocalesData => [
-        // LocaleModel(locale: arabic, language: 'Arabic', defaultLanguage: false),
-        // LocaleModel(
-        //     locale: english, language: 'English', defaultLanguage: true),
-        // LocaleModel(locale: french, language: 'French', defaultLanguage: false),
+        LocaleModel(locale: arabic, language: 'Arabic', defaultLanguage: false),
+        LocaleModel(
+            locale: english, language: 'English', defaultLanguage: true),
+        LocaleModel(locale: french, language: 'French', defaultLanguage: false),
       ];
   static get enabled => ConfigLocale.supportedLocalesData.isNotEmpty;
 

@@ -33,8 +33,8 @@ class NodeTranslationsScreen extends StatelessWidget {
                 onTap: () {
                   var locale = ConfigLocale.supportedLocalesData[index].locale;
                   languagesController.onChanged(locale);
-                  Get.toNamed(Routes.TAXONOMY_EDIT.path
-                      .replaceAll(':vocabulary', node.type.toString())
+                  Get.toNamed(Routes.NODE_ADD.path
+                      .replaceAll(':nodeType', node.type.toString())
                       .replaceAll(':id', node.id.toString()));
                 },
                 title: Text(ConfigLocale.supportedLocalesData[index].language),

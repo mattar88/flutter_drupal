@@ -15,16 +15,23 @@ import 'cache_service.dart';
 class AuthApiService extends ApiService {
   static String signUpUrl = '/jsonapi/user/register';
   static String userInfoUrl = '/oauth/userinfo';
+
   // These URLs are endpoints that are provided by the authorization
 // server. They're usually included in the server's documentation of its
 // OAuth2 API.
   static String authorizationUrl = '/oauth/authorize';
   static String refreshTokenUrl = '/oauth/token';
+
+  @override
+  List<String> get excludedApiPathPrefix {
+    super.excludedApiPathPrefix.add(userInfoUrl);
+    return super.excludedApiPathPrefix;
+  }
+
 // This is a URL on your application's server. The authorization server
 // will redirect the resource owner here once they've authorized the
 // client. The redirection will include the authorization code in the
 // query parameters.
-
   get redirectUrl => BuildConfig.instance.config.callbackPath;
 
   get authorizationEndpoint => Uri.parse(baseUrl + authorizationUrl);

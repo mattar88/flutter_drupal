@@ -9,8 +9,8 @@ void main() async {
   EnvConfig prodConfig = EnvConfig(
     appName: "Flutter Drupal",
     baseUrl: "", //Do not add "/" at the end
-    clientId: "cklX9qi2FGTEPPYqWD1zcsy8YAxh3ygXnoNcCQ6FdC0",
-    clientSecret: "secret",
+    clientId: "",
+    clientSecret: "",
     shouldCollectCrashLog: true,
   );
 

@@ -17,7 +17,7 @@
  *  All [Drupal](https://drupal.org/) functionality implemented using  [JSON:API](https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/api-overview)
  *  Development and production modes
 ## Architecture 
- <img src="./screenshots/architecture.jpg" wiidth="300">
+ <img src="./screenshots/architecture.jpg" height="450">
 
 
 ## Flutter Version
@@ -77,8 +77,8 @@ Tools • Dart 2.19.5 • DevTools 2.20.1
   the same for main_prod.dart
   
 ## Install Drupal(Web App)
-1. [Install Drupal from scratch](./drupal/install_drupal.md) 
-2. [Update existing Drupal Web App](./drupal/install_drupal.md)
+1. [Install Drupal from scratch](./drupal/install_drupal.md#install-drupal-from-scratch-first-method) 
+2. [Update existing Drupal Web App](./drupal/install_drupal.md#update-existing-drupal-web-app-second-method)
 
 # run this project by command line
 Dev: `flutter run --flavor dev lib/main_dev.dart`

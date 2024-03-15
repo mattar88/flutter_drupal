@@ -15,12 +15,16 @@ import '../values/app_colors.dart';
 import 'auth_api_service.dart';
 
 class ApiService extends GetConnect {
-  @override
-  String get baseUrl => BuildConfig.instance.config.baseUrl;
+  ///My default all url request add to it an prefix to exclude that
+  ///only override this variable
+  List<String> excludedApiPathPrefix = [];
 
   String? get apiPathPrefix => BuildConfig.instance.config.apiPathPrefix;
 
   int retry = 0;
+
+  @override
+  String get baseUrl => BuildConfig.instance.config.baseUrl;
 
   String fetchResponseErrorMessage(response) {
     var errorMsg = '';
@@ -41,7 +45,7 @@ class ApiService extends GetConnect {
 ////Add local prefix used to load the settings translations like label and fields description and others
   Uri addUrlPrefix(Uri url) {
     String urlPrefix = '';
-
+    log('addUrlPrefix: Uri ${url.path}, ${excludedApiPathPrefix.toString()}');
     //Add locale prefix
     if (ConfigLocale.supportedLocalesData.isNotEmpty) {
       var localeContent = ConfigLocale.currentLocale;
@@ -52,7 +56,8 @@ class ApiService extends GetConnect {
     }
 
     //Add API Path Prefix
-    if (apiPathPrefix != null &&
+    if (!excludedApiPathPrefix.contains(url.path) &&
+        apiPathPrefix != null &&
         apiPathPrefix!.isNotEmpty &&
         apiPathPrefix != '') {
       urlPrefix += '/$apiPathPrefix';
