@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '/app/my_app.dart';
 import '/flavors/build_config.dart';
 import '/flavors/env_config.dart';
@@ -6,7 +9,7 @@ import '/flavors/environment.dart';
 
 void main() async {
   EnvConfig devConfig = EnvConfig(
-    appName: "Flutter Drupal Dev",
+    appName: "Flutter Drupal (Dev)",
     baseUrl: "", //Do not add "/" at the end
     clientId: "",
     clientSecret: "",

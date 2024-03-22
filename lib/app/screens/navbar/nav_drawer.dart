@@ -19,11 +19,11 @@ class NavDrawer extends BaseScreen<NavDrawerController> {
     var T = AppLocalizations.of(context)!;
 
     // WidgetsBinding.instance.addPostFrameCallback((_) {
-    //   log('adter buuuuuildddd!');
-    //   if (!controller.isLoading.value) {
-    //     log('loaddddinnnnng');
-    //     controller.onInit();
-    //   }
+    //   // log('adter buuuuuildddd!');
+    //   // if (!controller.isLoading.value) {
+    //   //   log('loaddddinnnnng');
+    //   //   controller.onInit();
+    //   // }
     // });
     List<Widget> navItems;
     return Drawer(

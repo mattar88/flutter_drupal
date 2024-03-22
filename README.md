@@ -20,6 +20,10 @@
  <img src="./screenshots/architecture.jpg" height="450">
 
 
+## Install Drupal(Web App)
+1. [Install Drupal from scratch](./drupal/install_drupal.md#install-drupal-from-scratch-first-method) 
+2. [Update existing Drupal Web App](./drupal/install_drupal.md#update-existing-drupal-web-app-second-method)
+
 ## Flutter Version
 ``````
 PS > flutter --version
@@ -76,14 +80,15 @@ Tools • Dart 2.19.5 • DevTools 2.20.1
   ``````
   the same for main_prod.dart
   
-## Install Drupal(Web App)
-1. [Install Drupal from scratch](./drupal/install_drupal.md#install-drupal-from-scratch-first-method) 
-2. [Update existing Drupal Web App](./drupal/install_drupal.md#update-existing-drupal-web-app-second-method)
+## Configure and run Flutter (Frontend Mobile App)
+* [How to configure and run this project on Android Studio step by step](./readme_configuration_guideline.md)
 
-# run this project by command line
-Dev: `flutter run --flavor dev lib/main_dev.dart`
+## run this project by command line
+Dev: `flutter run --flavor dev --target lib/main_dev.dart`
 
-Prod: `flutter run --flavor prod lib/main_prod.dart`
+Prod: `flutter run --flavor prod --target lib/main_prod.dart`
+
+## How to configure and make android release build for production ([Check here](./readme_configuration_guideline.md#How-to-configure-and-make-android-release-build-for-production))
 
 ## How to update app information and continue development for your own project?
 

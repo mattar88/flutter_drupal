@@ -1,12 +1,12 @@
+import 'dart:async';
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-
-import '../../controllers/auth_controller.dart';
-import '../../controllers/home_controller.dart';
-import '../../routes/app_pages.dart';
 import 'package:get/get.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
+import '../../../flavors/build_config.dart';
+import '../../controllers/home_controller.dart';
 import '../navbar/nav_drawer.dart';
 
 class HomeScreen extends GetView<HomeController> {
@@ -14,52 +14,30 @@ class HomeScreen extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
+    GlobalKey<ScaffoldState> _key = GlobalKey();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      Future.delayed(const Duration(seconds: 3), () {
+        _key.currentState!.openDrawer();
+      });
+    });
     log('Go to home');
     return Scaffold(
-      drawer: NavDrawer(),
-      appBar: AppBar(
-        // leadingWidth: double.infinity,
-        title: const Text(
-          'Home',
-          style: TextStyle(fontWeight: FontWeight.normal, fontSize: 28),
+        key: _key,
+        drawer: NavDrawer(),
+        appBar: AppBar(
+          title: Text(BuildConfig.instance.config.appName),
         ),
-        // leading: Builder(builder: (context) {
-        //   return IconButton(
-        //     icon: const Icon(Icons.menu),
-        //     onPressed: () {
-        //       Scaffold.of(context).openDrawer();
-        //     },
-        //   );
-        // })
-      ),
-      body: controller.obx(
-        (state) => Container(
-            child: Column(
+        body: Column(
           children: [
-            const Text('This is the home page'),
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: const Image(
+                  image: AssetImage('screenshots/flutter_and_drupal.png')),
+            ),
+            Expanded(
+                child: WebViewWidget(
+                    controller: controller.documentationWebViewController)),
           ],
-        )),
-
-        // here you can put your custom loading indicator, but
-        // by default would be Center(child:CircularProgressIndicator())
-        onLoading: CircularProgressIndicator(),
-        onEmpty: Column(
-          children: [
-            const Text('No Data found'),
-            ElevatedButton(
-                onPressed: () {
-                  Get.find<AuthController>().signOut();
-                  Get.offAllNamed(Routes.LOGIN.path);
-                },
-                child: const Text("Signout",
-                    style: TextStyle(color: Colors.white))),
-          ],
-        ),
-
-        // here also you can set your own error widget, but by
-        // default will be an Center(child:Text(error))
-        onError: (error) => Text(''),
-      ),
-    );
+        ));
   }
 }

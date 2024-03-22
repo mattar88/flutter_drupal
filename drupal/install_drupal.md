@@ -1,6 +1,6 @@
 # Install Drupal from scratch (First method)
 * [Download webserver files](./flutter_drupal_web.zip) then upload it to your web server ([Web server requirements](https://www.drupal.org/docs/getting-started/system-requirements/web-server-requirements))
-* [Download database file]((./flutter_drupal_web.zip)) then import it into your database server ([Database server requirements](https://www.drupal.org/docs/getting-started/system-requirements/database-server-requirements))
+* [Download database file](./flutter_drupal_web.zip) then import it into your database server ([Database server requirements](https://www.drupal.org/docs/getting-started/system-requirements/database-server-requirements))
 
 # Update existing Drupal Web App (Second method)
 ### 1-Install the following modules by adding them to the composer.json
@@ -102,7 +102,7 @@ Then assign the following permissions to the authenticated user:
  * Grant OAuth2 codes
 
  # Enable Multilingual
- ### 1-In order to make your app translatable, go to Extend or path ```admin/modules```  in Multilingual section then select all modules.
+ ### 1-First enable all multilingual modules by going to Extend or path ```admin/modules```  in Multilingual section then select all modules.
 
  ### 2-Add a language using the path ```admin/config/regional/language```
 

@@ -3,7 +3,7 @@
    <uses-permission android:name="android.permission.INTERNET"/>
    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
    <application
-        android:label="flutter_drupal"
+        android:label="@string/app_name"
         android:name="${applicationName}"
         android:roundIcon="@mipmap/ic_launcher"
         android:icon="@mipmap/ic_launcher"
