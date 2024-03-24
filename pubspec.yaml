@@ -1,5 +1,5 @@
 name: flutter_drupal
-description: A new Flutter project.
+description: Flutter Template for Drupal CMS (Getx, MVVM), a best mobile app template that integrates all functionality of Drupal Using REST API.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
