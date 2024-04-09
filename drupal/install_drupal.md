@@ -1,6 +1,8 @@
+### In this project we use the [Drupal core](https://www.drupal.org/project/drupal) version 9.5.11
+
 # Install Drupal from scratch (First method)
-* [Download webserver files](./flutter_drupal_web.zip) then upload it to your web server ([Web server requirements](https://www.drupal.org/docs/getting-started/system-requirements/web-server-requirements))
-* [Download database file](./flutter_drupal_web.zip) then import it into your database server ([Database server requirements](https://www.drupal.org/docs/getting-started/system-requirements/database-server-requirements))
+* [Download webserver files](https://github.com/mattar88/flutter_drupal/raw/main/drupal/flutter_drupal_web.zip) then upload it to your web server ([Web server requirements](https://www.drupal.org/docs/getting-started/system-requirements/web-server-requirements))
+* [Download database file](https://github.com/mattar88/flutter_drupal/raw/main/drupal/database.mysql.gz "Download database file") then import it into your database server ([Database server requirements](https://www.drupal.org/docs/getting-started/system-requirements/database-server-requirements))
 
 # Update existing Drupal Web App (Second method)
 ### 1-Install the following modules by adding them to the composer.json
@@ -17,20 +19,21 @@
         "drupal/simple_oauth": "^5.2"
     },
 `````
-### 2-Install the contributed modules by download [./flutter_drupal_web.zip](./flutter_drupal_web.zip)
-  then extract the file and go to web > modules > custom
+### 2-Install the custom modules using [flutter_drupal_web.zip](https://github.com/mattar88/flutter_drupal/raw/main/drupal/flutter_drupal_web.zip)
+  First download it then extract the file and go to web > modules > custom
   then copy them to your project
   then [enable modules](https://www.drupal.org/docs/extending-drupal/installing-modules) by interface or command line
 
 
 ### 3-Install and configure module [simple oauth 5.2](https://www.drupal.org/project/simple_oauth) that already added in the point 1
-after that you should apply this [patch](https://www.drupal.org/files/issues/provide_default_scopes-2857930-2.patch), [why we apply this patch](https://www.drupal.org/project/simple_oauth/issues/3416173)
+after that you should apply this [patch](https://www.drupal.org/files/issues/provide_default_scopes-2857930-2.patch), [why we apply this patch?](https://www.drupal.org/project/simple_oauth/issues/3416173)
 
-In order to configure the module watch the following tutorial and read the note in the point 4 before
+In order to configure the module watch the following tutorial and read before the Note in the point 4
  [![Authorization Code Grant - OAuth 2.0 with Simple OAuth module for Drupal 9](./screenshots/simple_oauth_tutorial.png)](https://www.youtube.com/watch?v=rAf5l_tPMzg)
      
 ### 4-Note in this version of module simple oauth 5.2 the scopes is moved to client(consumer)
 we should let all of them uncheck in order to get the roles that exist in account.
+
    ![scopes in simpleoauth](./screenshots/scopes_simpleoauth.png)
 
 ### 5-Go to the services.yml in your project following the below path

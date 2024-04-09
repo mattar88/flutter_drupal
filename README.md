@@ -19,10 +19,12 @@
 ## Architecture 
  <img src="./screenshots/architecture.jpg" height="450">
 
-
-## Install Drupal(Web App)
+## Drupal Version
+In this project we use the [Drupal core](https://www.drupal.org/project/drupal) version 9.5.11
+## Install Drupal(Web App) by two methods
 1. [Install Drupal from scratch](./drupal/install_drupal.md#install-drupal-from-scratch-first-method) 
 2. [Update existing Drupal Web App](./drupal/install_drupal.md#update-existing-drupal-web-app-second-method)
+
 
 ## Flutter Version
 ``````
@@ -65,6 +67,8 @@ Tools • Dart 2.19.5 • DevTools 2.20.1
   timezone: ^0.9.2
   logger: ^2.1.0
 ``````
+Note: In case you add the code to your main project make sure to read the documentation of the above dependencies, may you need to add some keys in <i>Info.plist</i> for IOS and in <i>AndroidManifest.xml</i> for Android to prevent crash the app.
+
 ## Install Flutter(Frontend Mobile App)
 1. Download the Flutter version mentioned above
 2. Clone the project

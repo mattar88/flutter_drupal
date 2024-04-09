@@ -1,4 +1,4 @@
-# How to configure and run this project on Android Studio?
+# How to configure and run this project on Android Studio
  * First of all open your project using Android studio IDE
   ![Open project](./screenshots/flutter_configuration_guideline_0.png)
 
@@ -43,4 +43,4 @@ storeFile=<path to the keystore file>
 ```
 Then run `flutter build appbundle -t lib/main_prod.dart --flavor prod` to generate app bundle (.aab) file. To generate .apk file, run `flutter build apk -t lib/main_prod.dart --flavor prod`.
 
-For more details, please read through guide to build and relase android app documentation from [this link](https://docs.flutter.dev/deployment/android).
+For more details, please read through guide to build and relase android app documentation from [this link](https://docs.flutter.dev/deployment/android#).
