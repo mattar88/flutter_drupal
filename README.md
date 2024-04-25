@@ -21,6 +21,9 @@
 
 ## Drupal Version
 In this project we use the [Drupal core](https://www.drupal.org/project/drupal) version 9.5.11
+
+### [How do I specify a PHP version ?](./drupal/install_drupal.md)
+
 ## Install Drupal(Web App) by two methods
 1. [Install Drupal from scratch](./drupal/install_drupal.md#install-drupal-from-scratch-first-method) 
 2. [Update existing Drupal Web App](./drupal/install_drupal.md#update-existing-drupal-web-app-second-method)
