@@ -1,3 +1,6 @@
+### How do I specify a PHP version ?
+This project supports PHP 8.2 as a minimum version (see [Drupal PHP requirements](https://www.drupal.org/docs/system-requirements/php-requirements)), however it's possible that a `composer update`  will upgrade some packages that will then require a newer version.
+
 ### In this project we use the [Drupal core](https://www.drupal.org/project/drupal) version 9.5.11
 
 # Install Drupal from scratch (First method)
